@@ -1,0 +1,42 @@
+<style>
+    div
+    {
+        text-align:center;
+       
+    }
+    </style>
+   
+    <div>
+    <form>
+    
+        Qno:- <input type="text" name="qno"  [(ngModel)]="question.qno"><br>
+        
+        Question:- <input type="text" name="qtext"  [(ngModel)]="question.qtext"><br>
+            
+        option1 :- <input type="text" name="op1"  [(ngModel)]="question.op1"><br>
+        
+        option2 :- <input type="text" name="op2"  [(ngModel)]="question.op2"><br>
+            
+        option3 :- <input type="text" name="op3"  [(ngModel)]="question.op3"><br>
+        
+        option4 :- <input type="text" name="op4"  [(ngModel)]="question.op4"><br>
+            
+        Answer :- <input type="text" name="answer"  [(ngModel)]="question.answer"><br>
+        
+        subject :- <input type="text" name="subject" [(ngModel)]="question.subject"><br>
+            
+        
+    </form>
+    </div>
+    <div>
+        
+        <input type="button" value="addQuestion" (click)="addQuestion()">
+       
+        <input type="button" value="viewQuestion" (click)="viewQuestion()">
+      
+        <input type="button" value="deleteQuestion" (click)="deleteQuestion()"><br><br>
+       
+        <input type="button" value="updateQuestion" (click)="updateQuestion()">
+    </div>
+
+    {{message}}

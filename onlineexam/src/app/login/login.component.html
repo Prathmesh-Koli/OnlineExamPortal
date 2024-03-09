@@ -1,0 +1,25 @@
+
+<span style="color: red;font-size: 30px;">{{message}}</span>
+
+<form>
+
+    <input type="text" name="username" [(ngModel)]="user.username"><br>
+    <br>
+    <input type="password" name="password" [(ngModel)]="user.password"><br>
+    <br>
+    <select name="subject" [(ngModel)]="subject">
+
+        <option *ngFor="let subjectname of subjects" value="{{subjectname}}">{{subjectname}}</option>
+
+    </select><br>
+    <br>
+    <input type="button" value="Student Login" (click)="validate()"><br>
+    <br>
+    <input type="button" value="Admin Login" (click)="validate2()"><br>
+    <br>
+
+    <input type="button" value="sing up" (click)="showRegister()"><br><br>
+
+    <a href="checking" style="color: red;font-size: 20px;">forget password</a>
+    
+</form>

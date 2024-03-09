@@ -1,0 +1,67 @@
+/* Style for form */
+form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Style for input fields */
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style for buttons */
+input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect for buttons */
+input[type="button"]:hover {
+    background-color: #2980b9;
+}
+
+/* Style for link */
+a {
+    color: red;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* Hover effect for link */
+a:hover {
+    color: darkred;
+}
+
+/* Style for message */
+span {
+    color: #e74c3c;
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+}
+
+/* Additional decorations for message */
+span::before {
+    content: "\1F31F";
+    font-size: 36px;
+    margin-right: 10px;
+}
+
+span::after {
+    content: "\1F31F";
+    font-size: 36px;
+    margin-left: 10px;
+}

@@ -1,0 +1,39 @@
+<html>
+
+<body>
+
+
+<p>welcome {{username}}</p>
+
+<span id="examduration">{{durationMessage}}</span>
+
+<span id="maxtime">{{maxtime}}</span> <br><br>
+
+<input  type=button  *ngFor="let qno of allqnos" [value]="qno" (click)="getQuestion($event)">
+
+<form name="questionForm">
+    
+    <input type="text"  name="qno"   [value]="question.qno" ><br><br>
+    <input type="text"   name="qtext" [value]="question.qtext" size="100"><br><br>
+    
+    <br><br>
+      
+    <input   name="options" type="radio" [checked]="isChecked(question.op1)"  [value]="question.op1" [(ngModel)]="submittedAnswer" (change)="saveAnswer()"  class="css-checkbox" name="radioModel" [(ngModel)]="selected"><span [style.color]="getColor(question.op1)">{{question.op1}}</span><br><br>
+    <input   name="options" type="radio" [checked]="isChecked(question.op2)"  [value]="question.op2" [(ngModel)]="submittedAnswer" (change)="saveAnswer()"  class="css-checkbox" name="radioModel" [(ngModel)]="selected"><span [style.color]="getColor(question.op2)">{{question.op2}}</span><br><br> 
+    <input   name="options" type="radio" [checked]="isChecked(question.op3)"  [value]="question.op3" [(ngModel)]="submittedAnswer" (change)="saveAnswer()" class="css-checkbox" name="radioModel" [(ngModel)]="selected" ><span [style.color]="getColor(question.op3)">{{question.op3}}</span><br><br> 
+    <input   name="options" type="radio" [checked]="isChecked(question.op4)"  [value]="question.op4" [(ngModel)]="submittedAnswer" (change)="saveAnswer()"  class="css-checkbox" name="radioModel" [(ngModel)]="selected"><span [style.color]="getColor(question.op4)">{{question.op4}}</span><br><br>
+
+    <input type="hidden" [value]="question.answer"><br><br>
+
+    <input type="button" value="next" (click)="nextQuestion()">
+
+    <input type="button" value="previous" (click)="previousQuestion()">
+
+    <input type="button" value="endexam" (click)="endexam()">
+    
+    
+</form>
+
+</body>
+
+</html>
